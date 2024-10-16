@@ -1,10 +1,14 @@
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../assets/assets_frontend/logo.png'
 import logo2 from '../assets/assets_frontend/photowithbutton.png'
 
 const Navbar = () => {
+
+  const navigate= useNavigate();
+
   return (
+   
     <div>
     <ul className='flex p-10  items-center bg-backgroundcolour '>
    
@@ -28,8 +32,8 @@ const Navbar = () => {
         </NavLink>
      </div>
       
-        <button className='bg-colourblueshade ml-auto py-2 px-4 rounded-full flex-grow flex items-center  text-white font-semibold '>
-        <img src={logo2} alt="Button Logo" className="w-6 h-6 mr-2" />Register Now</button>
+        <button className='bg-colourblueshade ml-auto py-2 px-4 rounded-full flex-grow flex items-center  text-white font-semibold '  onClick={()=>navigate('/login')}>
+        <img src={logo2} alt="Button Logo" className="w-6 h-6 mr-2 " />Register Now</button>
 
      
        
